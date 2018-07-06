@@ -1,0 +1,45 @@
+body{
+    background: #fca;
+}
+.contenedor1{
+    text-align: center;
+    margin: 50px;
+    padding-top:20px; 
+    padding-bottom:20px; 
+    background: gray;
+    color: white;
+    font-family: 'Verdana';
+    font-size: 2em;
+    border-radius: 0.5em;
+    box-shadow: 5px 10px #202020;
+}
+.contenedor2{
+    text-align: center;
+    margin: 50px;
+    padding: 20px;
+    background:cyan;
+    font-family: 'Verdana';
+    font-size: 1.5em;
+
+}
+h2{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: blue;
+    border: solid 2px white;
+    padding: 1em;
+    border-radius: 0.5em;
+    font-size: 1em;
+}
+h3{
+   text-align: center;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   margin-top:20px; 
+
+}
+h5{
+   text-align: center;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
