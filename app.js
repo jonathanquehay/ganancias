@@ -6,24 +6,18 @@ var hora=document.getElementById("horaActual");
 var mesAc=document.getElementById("mesA");
 var mydate=new Date();
 var diasMes=new Date(mydate.getFullYear(),mydate.getMonth(),0).getDate();
-const SALDO1 = 150000 * 0.0427/12/mydate.getDate();
+        var SALDO1 = (150000 * 0.0488/12/diasMes)*mydate.getDate();
+        var SALDO2 = (260000*0.0417/12/diasMes)*mydate.getDate();
+        var SALDO3 = (30000*0.02/12/diasMes)*mydate.getDate();
+        var SALDO4 = (30000*0.05/12/diasMes)*mydate.getDate(); 
 
-const SALDO2 = 260000*0.0417/12/mydate.getDate();
-const SALDO3 = 30000*0.02/12/mydate.getDate();
-const SALDO4 = 30000*0.05/12/mydate.getDate();
 var gana = SALDO1+SALDO2+SALDO3+SALDO4;
 
-var loactual=SALDO1 + SALDO1/mydate.getHours()/mydate.getMinutes()/mydate.getSeconds();
-var loactual2=SALDO2 + SALDO2/mydate.getHours()/mydate.getMinutes()/mydate.getSeconds();
-var loactual3=SALDO3 + SALDO3/mydate.getHours()/mydate.getMinutes()/mydate.getSeconds();
-var loactual4=SALDO4 + SALDO4/mydate.getHours()/mydate.getMinutes()/mydate.getSeconds();
-var porSegundo1 = 150000 * 0.0427/12/diasMes/24/60/60;
-var porSegundo2 = 260000 * 0.0417/12/diasMes/24/60/60;
-var porSegundo3 = 30000 * 0.01/12/diasMes/24/60/60;
-var porSegundo4 = 30000 * 0.05/12/diasMes/24/60/60;
-
-
-
+var porSegundo1 = 150000 * 0.0488/12/diasMes/24/60;
+var porSegundo2 = 260000 * 0.0417/12/diasMes/24/60;
+var porSegundo3 = 30000 * 0.01/12/diasMes/24/60;
+var porSegundo4 = 30000 * 0.05/12/diasMes/24/60;
+var totalActualhoy =  (gana + porSegundo1 + porSegundo2 + porSegundo3+porSegundo4) - (gana*0.02);
 
 //Para mostrar la fecha actual
 var year=mydate.getYear() 
@@ -46,9 +40,8 @@ function show5(){
         segundo = fecha.getSeconds();
         horita = hor + ":" + minuto + ":" + segundo;
         hora.innerHTML = horita;
-        gana+= porSegundo1+porSegundo2+porSegundo3+porSegundo4;
-        var impuesto= gana - (gana * 0.02);
-        dato1.innerHTML = impuesto.toFixed(4);
+        totalActualhoy += (porSegundo1+porSegundo2+porSegundo3+porSegundo4);
+        dato1.innerHTML = totalActualhoy.toFixed(4);
         setTimeout('show5()',1000);
 }
 
